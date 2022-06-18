@@ -569,24 +569,24 @@ OUTPUT(Stm32f407VG_drivers.elf elf32-littlearm)
  .debug_ranges  0x0000000000000000       0x10 Src/main.o
  .debug_ranges  0x0000000000000010       0x20 Startup/startup_stm32f407vgtx.o
 
-.debug_macro    0x0000000000000000      0xf06
- .debug_macro   0x0000000000000000       0x6d Src/main.o
- .debug_macro   0x000000000000006d      0xa60 Src/main.o
- .debug_macro   0x0000000000000acd       0x22 Src/main.o
- .debug_macro   0x0000000000000aef       0x8e Src/main.o
- .debug_macro   0x0000000000000b7d       0x51 Src/main.o
- .debug_macro   0x0000000000000bce       0xef Src/main.o
- .debug_macro   0x0000000000000cbd       0x6a Src/main.o
- .debug_macro   0x0000000000000d27      0x1df Src/main.o
+.debug_macro    0x0000000000000000      0xefc
+ .debug_macro   0x0000000000000000       0x63 Src/main.o
+ .debug_macro   0x0000000000000063      0xa60 Src/main.o
+ .debug_macro   0x0000000000000ac3       0x22 Src/main.o
+ .debug_macro   0x0000000000000ae5       0x8e Src/main.o
+ .debug_macro   0x0000000000000b73       0x51 Src/main.o
+ .debug_macro   0x0000000000000bc4       0xef Src/main.o
+ .debug_macro   0x0000000000000cb3       0x6a Src/main.o
+ .debug_macro   0x0000000000000d1d      0x1df Src/main.o
 
-.debug_line     0x0000000000000000      0x475
- .debug_line    0x0000000000000000      0x3f1 Src/main.o
- .debug_line    0x00000000000003f1       0x84 Startup/startup_stm32f407vgtx.o
+.debug_line     0x0000000000000000      0x405
+ .debug_line    0x0000000000000000      0x381 Src/main.o
+ .debug_line    0x0000000000000381       0x84 Startup/startup_stm32f407vgtx.o
 
-.debug_str      0x0000000000000000     0x3afb
- .debug_str     0x0000000000000000     0x3aca Src/main.o
-                                       0x3c25 (size before relaxing)
- .debug_str     0x0000000000003aca       0x31 Startup/startup_stm32f407vgtx.o
+.debug_str      0x0000000000000000     0x3ae7
+ .debug_str     0x0000000000000000     0x3ab6 Src/main.o
+                                       0x3c11 (size before relaxing)
+ .debug_str     0x0000000000003ab6       0x31 Startup/startup_stm32f407vgtx.o
                                          0x8a (size before relaxing)
 
 .comment        0x0000000000000000       0x7b
