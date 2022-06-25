@@ -1,9 +1,14 @@
-17:00:10 **** Incremental Build of configuration Debug for project Stm32f407VG_drivers ****
+17:51:41 **** Incremental Build of configuration Debug for project Stm32f407VG_drivers ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -I"C:/Users/lamqi/OneDrive/Desktop/C_Programs/STM_Microcontroller/Stm32f407VG_drivers/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:23:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
-   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
-    ^~~~~~~
+arm-none-eabi-gcc "../drivers/src/stm32f407VG_Gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -I"C:/Users/lamqi/OneDrive/Desktop/C_Programs/STM_Microcontroller/Stm32f407VG_drivers/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"drivers/src/stm32f407VG_Gpio_driver.d" -MT"drivers/src/stm32f407VG_Gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/src/stm32f407VG_Gpio_driver.o"
+../drivers/src/stm32f407VG_Gpio_driver.c: In function 'GPIO_ReadFromInputPin':
+../drivers/src/stm32f407VG_Gpio_driver.c:208:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../drivers/src/stm32f407VG_Gpio_driver.c: In function 'GPIO_ReadFromInputPort':
+../drivers/src/stm32f407VG_Gpio_driver.c:224:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
 arm-none-eabi-gcc -o "Stm32f407VG_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\lamqi\OneDrive\Desktop\C_Programs\STM_Microcontroller\Stm32f407VG_drivers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stm32f407VG_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Stm32f407VG_drivers.elf
  
@@ -19,5 +24,5 @@ Finished building: Stm32f407VG_drivers.list
  
  
 
-17:00:11 Build Finished. 0 errors, 1 warnings. (took 979ms)
+17:51:41 Build Finished. 0 errors, 2 warnings. (took 671ms)
 
