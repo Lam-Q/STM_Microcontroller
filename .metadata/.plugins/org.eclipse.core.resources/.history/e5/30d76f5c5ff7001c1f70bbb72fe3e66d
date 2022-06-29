@@ -201,7 +201,6 @@ typedef struct
 #define GPIOH 			((GPIO_RegDef_t*)GPIOH_BASEADDR)
 #define GPIOI 			((GPIO_RegDef_t*)GPIOI_BASEADDR)
 
-#define EXTI			((EXTI_RegDef_t*)EXTI_BASEADDR)
 
 #define RCC				((RCC_RegDef_t*)RCC_BASEADDR)
 

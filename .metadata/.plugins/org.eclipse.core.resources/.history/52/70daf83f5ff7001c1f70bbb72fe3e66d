@@ -169,23 +169,6 @@ typedef struct
 
 }RCC_RegDef_t;
 
-
-/*
- * Peripheral register definitnion for GPIO
- */
-typedef struct
-{
-	__vo uint32_t IMR;	    // /*!< TODO Give short disctiption
-	__vo uint32_t EMR;		// TODO
-	__vo uint32_t RTSR;
-	__vo uint32_t FTSR;
-	__vo uint32_t SWIER;
-	__vo uint32_t PR;
-
-}EXTI_RegDef_t;
-
-
-
 /*
  * Peripheral definition (Peripheral base address typecasted to xxx_RegDef_t
  *
@@ -201,7 +184,6 @@ typedef struct
 #define GPIOH 			((GPIO_RegDef_t*)GPIOH_BASEADDR)
 #define GPIOI 			((GPIO_RegDef_t*)GPIOI_BASEADDR)
 
-#define EXTI			((EXTI_RegDef_t*)EXTI_BASEADDR)
 
 #define RCC				((RCC_RegDef_t*)RCC_BASEADDR)
 
