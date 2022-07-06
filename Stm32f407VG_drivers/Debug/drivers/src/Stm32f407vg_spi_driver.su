@@ -1,0 +1,4 @@
+Stm32f407vg_spi_driver.c:27:6:SPI_PeriClockControl	16	static
+Stm32f407vg_spi_driver.c:84:6:SPI_Init	16	static
+Stm32f407vg_spi_driver.c:120:6:SPI_SendData	24	static
+Stm32f407vg_spi_driver.c:136:6:SPI_ReceiveData	24	static
