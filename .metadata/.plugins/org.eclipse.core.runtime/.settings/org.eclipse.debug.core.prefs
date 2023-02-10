@@ -4,4 +4,4 @@
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.postmortemLaunchType=org.eclipse.cdt.dsf.gdb.launch.coreCLaunch,debug,;
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.remoteApplicationLaunchType=org.eclipse.rse.remotecdt.dsf.debug,debug,;
 eclipse.preferences.version=1
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="pGPIOHandle-&gt;pGPIOx-&gt;OSPEEDR"/>\r\n<expression enabled\="true" text\="pGPIOHandle-&gt;GPIO_PinConfig.GPIO_PinSpeed"/>\r\n</watchExpressions>\r\n
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="*pI2Cx"/>\r\n<expression enabled\="true" text\="I2C1handle.pI2Cx"/>\r\n<expression enabled\="true" text\="commandCode"/>\r\n<expression enabled\="true" text\="pI2CHandle-&gt;TxRxState"/>\r\n<expression enabled\="true" text\="commandCode"/>\r\n</watchExpressions>\r\n

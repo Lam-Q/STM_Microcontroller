@@ -1,2 +1,4 @@
 GPIOA
 0x4002000+0x10
+pI2CHandle->TxRxState
+commandCode

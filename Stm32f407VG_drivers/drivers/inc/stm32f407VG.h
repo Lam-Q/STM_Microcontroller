@@ -8,10 +8,12 @@
 #ifndef INC_STM32F407VG_H_
 #define INC_STM32F407VG_H_
 #define __vo volatile
-
+#define __weak __attribute__((weak))
 #include <stdint.h>
+#include <stddef.h>
 
 
+#define NULL ( (void *) 0)
 
 /**************************************START: PROCESSOR SPECIFIC DETAILS***********************************************8
  * ARM CORTEX Mx Processor NVIC ISERx Register Addresses
@@ -33,7 +35,7 @@
  * ARM Cortex Mx Processor NVIC ICERx register Addresses
  */
 #define NVIC_ICER0			((__vo uint32_t*)0xE000E11U)
-
+#define NVIC_ICER1			((__vo uint32_t*)0xE000E11U)
 
 
 
@@ -229,17 +231,52 @@ typedef struct
  */
 typedef struct
 {
-	uint32_t SPI_CR1; 		/*!< possible values from @SPI Control Register 1 >*/
-	uint32_t SPI_CR2;   		/*!< possible values from @SPI Control Register 2 >*/
-	uint32_t SPI_SR; 		/*!< possible values from @SPI Status Register >*/
-	uint32_t SPI_DR;			/*!< possible values from @SPI Data Register>*/
-	uint32_t SPI_CRCPR;		/*!< possible values from @SPI CRC Polynomial register >*/
-	uint32_t SPI_RXCRCR;		/*!< possible values from @SPI RX CRC Register >*/
-	uint32_t SPI_TXCRCR;		/*!< possible values from @SPI TX CRC Register >*/
-	uint32_t SPI_I2SCFGR;	/*!< possible values from @SPI_I2S configuration register >*/
-	uint32_t SPI_I2SPR;		/*!< possible values from @SPI_I2S prescaler register >*/
+	__vo uint32_t SPI_CR1; 		/*!< possible values from @SPI Control Register 1 >*/
+	__vo uint32_t SPI_CR2;   		/*!< possible values from @SPI Control Register 2 >*/
+	__vo uint32_t SPI_SR; 		/*!< possible values from @SPI Status Register >*/
+	__vo uint32_t SPI_DR;			/*!< possible values from @SPI Data Register>*/
+	__vo uint32_t SPI_CRCPR;		/*!< possible values from @SPI CRC Polynomial register >*/
+	__vo uint32_t SPI_RXCRCR;		/*!< possible values from @SPI RX CRC Register >*/
+	__vo uint32_t SPI_TXCRCR;		/*!< possible values from @SPI TX CRC Register >*/
+	__vo uint32_t SPI_I2SCFGR;	/*!< possible values from @SPI_I2S configuration register >*/
+	__vo uint32_t SPI_I2SPR;		/*!< possible values from @SPI_I2S prescaler register >*/
 
 }SPI_RegDef_t;
+
+/*
+ * Peripheral register definition for I2C
+ */
+typedef struct
+{
+	__vo uint32_t I2C_CR1; 		/*!< possible values from @SPI Control Register 1 >*/
+	__vo uint32_t I2C_CR2;   		/*!< possible values from @SPI Control Register 2 >*/
+	__vo uint32_t I2C_OAR1; 		/*!< possible values from @SPI Status Register >*/
+	__vo uint32_t I2C_OAR2;			/*!< possible values from @SPI Data Register>*/
+	__vo uint32_t I2C_DR;		/*!< possible values from @SPI CRC Polynomial register >*/
+	__vo uint32_t I2C_SR1;		/*!< possible values from @SPI RX CRC Register >*/
+	__vo uint32_t I2C_SR2;		/*!< possible values from @SPI TX CRC Register >*/
+	__vo uint32_t I2C_CCR;	/*!< possible values from @SPI_I2S configuration register >*/
+	__vo uint32_t I2C_TRISE;		/*!< possible values from @SPI_I2S prescaler register >*/
+	__vo uint32_t I2C_FLTR;		/*!< possible values from @SPI_I2S prescaler register >*/
+
+}I2C_RegDef_t;
+
+
+/*
+ * Peripheral Register definition for USART/UART
+ */
+
+typedef struct
+{
+	__vo uint32_t USART_SR; 		/*!< possible values from @USART Status Register >*/
+	__vo uint32_t USART_DR;   		/*!< possible values from @USART Data Register >*/
+	__vo uint32_t USART_BRR; 		/*!< possible values from @USART Baud Rate Register >*/
+	__vo uint32_t USART_CR1;		/*!< possible values from @USART Control Register 1>*/
+	__vo uint32_t USART_CR2;		/*!< possible values from @USART Control Register 2>*/
+	__vo uint32_t USART_CR3;		/*!< possible values from @USART Control Register 3>*/
+	__vo uint32_t USART_GTPR;		/*!< possible values from @USART Guard Time and Prescaler Register >*/
+}USART_RegDef_t;
+
 
 
 /*
@@ -263,10 +300,23 @@ typedef struct
 
 #define SYSCFG  		((SYSCFG_RegDef_t*)SYSCFG_BASEADDR)
 
-#define SPI1				((SPI_RegDef_t*)SPI1_BASEADDR)
-#define SPI2				((SPI_RegDef_t*)SPI2_BASEADDR)
-#define SPI3				((SPI_RegDef_t*)SPI3_BASEADDR)
-#define SPI4				((SPI_RegDef_t*)SPI4_BASEADDR)
+#define SPI1			((SPI_RegDef_t*)SPI1_BASEADDR)
+#define SPI2			((SPI_RegDef_t*)SPI2_BASEADDR)
+#define SPI3			((SPI_RegDef_t*)SPI3_BASEADDR)
+#define SPI4			((SPI_RegDef_t*)SPI4_BASEADDR)
+
+#define I2C1			((I2C_RegDef_t*)I2C1_BASEADDR)
+#define I2C2			((I2C_RegDef_t*)I2C2_BASEADDR)
+#define I2C3			((I2C_RegDef_t*)I2C3_BASEADDR)
+
+#define USART1			((USART_RegDef_t*)USART1_BASEADDR)
+#define USART2			((USART_RegDef_t*)USART2_BASEADDR)
+#define USART3			((USART_RegDef_t*)USART3_BASEADDR)
+#define UART4			((USART_RegDef_t*)UART4_BASEADDR)
+#define UART5			((USART_RegDef_t*)UART5_BASEADDR)
+#define USART6			((USART_RegDef_t*)USART6_BASEADDR)
+
+
 /*
  * Clock Enable macros for GPIOx peripherals
  */
@@ -377,6 +427,24 @@ typedef struct
 #define SPI2_REG_RESET()   do{ (RCC->APB1RSTR |= (1 << 14));   (RCC->APB1RSTR &= ~(1 << 14));  } while(0)
 #define SPI3_REG_RESET()   do{ (RCC->APB1RSTR |= (1 << 15));   (RCC->APB1RSTR &= ~(1 << 15));  } while(0)
 
+/*
+ * Macros to reset I2C peripherals
+ */
+
+#define I2C1_REG_RESET()   do{ (RCC->APB1RSTR |= (1 << 21));   (RCC->APB1RSTR &= ~(1 << 21));  } while(0)
+#define I2C2_REG_RESET()   do{ (RCC->APB1RSTR |= (1 << 22));   (RCC->APB1RSTR &= ~(1 << 22));  } while(0)
+#define I2C3_REG_RESET()   do{ (RCC->APB1RSTR |= (1 << 23));   (RCC->APB1RSTR &= ~(1 << 23));  } while(0)
+
+
+/*
+ * Macros to reset USART peripherals
+ */
+
+#define USART1_REG_RESET()   do{ (RCC->APB2RSTR |= (1 << 4));   (RCC->APB1RSTR &= ~(1 << 4));   } while(0)
+#define USART2_REG_RESET()   do{ (RCC->APB1RSTR |= (1 << 17));  (RCC->APB1RSTR &= ~(1 << 17));  } while(0)
+#define USART3_REG_RESET()   do{ (RCC->APB1RSTR |= (1 << 18));  (RCC->APB1RSTR &= ~(1 << 18));  } while(0)
+#define USART6_REG_RESET()   do{ (RCC->APB1RSTR |= (1 << 5));   (RCC->APB1RSTR &= ~(1 << 5));   } while(0)
+
 
 /*
  * Returns Portcode for given GPIOx Base addresss
@@ -405,6 +473,25 @@ typedef struct
 #define IRQ_NO_EXTI4			10
 #define IRQ_NO_EXTI9_5			23
 #define IRQ_NO_EXTI5_10			40
+#define IRQ_NO_SPI1				35
+#define IRQ_NO_SPI2				36
+#define IRQ_NO_SPI3				51
+
+#define IRQ_NO_I2C1_EV			31
+#define IRQ_NO_I2C1_ER			32
+#define IRQ_NO_I2C2_EV			33
+#define IRQ_NO_I2C2_ER			34
+
+#define IRQ_NO_USART1			37
+#define IRQ_NO_USART2			38
+#define IRQ_NO_USART3			39
+#define IRQ_NO_UART4			52
+#define IRQ_NO_UART5			53
+
+
+
+
+
 
 #define NVIC_IRQ_PRI0			0
 #define NVIC_IRQ_PRI1			1
@@ -525,14 +612,166 @@ typedef struct
 #define SPI_SR_BSY			7
 #define SPI_SR_FRE			8
 
+/*****************************************************************************
+ * Bit position definitions for I2C
+ *****************************************************************************/
+/*
+ * Bit Position definition I2C_CR1
+ */
+
+#define I2C_CR1_PE			0		//1 = Enables Peripheral
+#define I2C_CR1_SMBUS		1		//1 = SMBus Mode, 0 = I2C mode
+#define I2C_CR1_DONOTUSE	2		// RESERVED MUST BE KEPT at reset value
+#define I2C_CR1_SMBTYPE		3		// 1= SMBus Host, 0 = SMBus Device
+#define I2C_CR1_ENARP		4		// 1 = ARP enable, 0 = ARP Disable
+#define I2C_CR1_ENPEC		5		// 1 = PEC Calc Enable, 0 = PEC calc disable
+#define I2C_CR1_ENGC		6		// 1 = General Call Enabled ACked, 0 = address 00h is NAck
+#define I2C_CR1_NOSTRETCH	7		// 1 = Clock Stretching Disabled
+#define I2C_CR1_START		8		// 1 = Start Signal Generation
+#define I2C_CR1_STOP		9		// 1 = Stop Generation
+#define I2C_CR1_ACK			10		// 1 = Acknowledge return after a byte is received, 0 = No Ack
+#define I2C_CR1_POS			11		// 1 = Ack Bit controls next byte, 0 = Ack bit controls current Byte
+#define I2C_CR1_PEC			12		// 1 = PEC Transfer, 0 = No PEC Transfer
+#define I2C_CR1_BIDIMODE	13		// 1 = Drives SMBA pin low, 0 = Release SMBA pin High
+#define I2C_CR1_DONOTUSE1	14		// RESERVED MUST BE KEPT at reset value
+#define I2C_CR1_SWRST		15		// 1 = I2C Peripheral under reset state, 0 = Not Reset
+
+/*
+ * Bit Position definition I2C_CR2
+ */
+
+#define I2C_CR2_FREQ		0		// Set PCLock Freq, Minimum 2Mhz
+#define I2C_CR2_ITERREN		8		// 1 = Error Interrupt Enabled, 0 = Disabled
+#define I2C_CR2_ITEVTEN		9		// 1 = Event Interrupt Enabled, 0 = Disabled
+#define I2C_CR2_ITBUFFEN	10		// 1 = TxE=1 or RxE=1 generates interrupt, 0 = Dont generate
+#define I2C_CR2_DMAEN		11		// 1 = DMA Request Enabled when TxE=1/RxE=1, 0 = disabled
+#define I2C_CR2_LAST		12		// 1 = Next DMA EOT is last transfer, 0 = next DMA not last
 
 
 
+/*
+ * Bit position definition I2C_SR1
+ */
+#define I2C_SR1_SB			0		// 1 = Start Condition Generated, 0 = No start
+#define I2C_SR1_ADDR		1		// 1 = Received Address matched, 0 = Addr Mismatc
+#define I2C_SR1_BTF			2		// 1 = Data Byte Transfer succeeded, 0 = Data Byte not done
+#define I2C_SR1_ADD10		3		// 1 = Master has sent first addr byte, 0 = No ADD10 Event ocurred
+#define I2C_SR1_STOPF		4		// 1 = Stop condition detected, 0 = No Stop Condition detected
+#define I2C_SR1_RxNE		6		// 1 = Data Register Not Empty, 0 = Data Register Empty
+#define I2C_SR1_TxE			7		// 1 = Data register empty, 0 = Data register Not Empty
+#define I2C_SR1_BERR		8		// 1 = Misplaced Start or Stop Condition
+#define I2C_SR1_ARLO		9		// 1 = Arbitration Lost detectected
+#define I2C_SR1_AF			10		// 1 = Acknowledge Failure, 0 = No Ack failure
+#define I2C_SR1_OVR			11		// 1 = Ovverrun or underrun, 0 = No Overrun or underrun
+#define I2C_SR1_PECERR		12		// 1 = PEC Error, 0 = PEC no Error
+#define I2C_SR1_TIMEOUT		14		// 1 = SCL Remained LOW FOR 25ms, 0 No timeout error
+#define I2C_SR1_SMBALERT	15		// 1(master) = SMBUS alert occured on pin, 1(master) = SBAlert Response address header to SMBALERT LOW received.
 
 
+/*
+ * Bit position definition I2C_SR2
+ */
+
+#define I2C_SR2_MSL			0		// 1 = Master Mode
+#define I2C_SR2_BUSY		1		// 1 = Received Address matched, 0 = Addr Mismatch
+#define I2C_SR2_TRA			2		// 1 = Data Bytes transmitted
+#define I2C_SR2_GENCALL		4		// 1 = General Call address received when ENGC = 1
+#define I2C_SR2_SMBDEFAULT	5		// 1 = SMBUS Device Default address received when ENARP = 1
+#define I2C_SR2_SMBHOST		6		// 1 = SMBUS Host address received when SMBTYE = 1,0 = No SMBUS Host addr
+#define I2C_SR2_DUALF		7		// 1 = Received addr matched with OAR2, 0=Received addr matched with OAR1
+#define I2C_SR2_PEC			8		// Packet error checking register
+
+/*
+ * Bit position definition I2C_SR2
+ */
+#define I2C_CCR_CCR			0		//
+#define I2C_CCR_DUTY		14
+#define I2C_CCR_FS			15
 
 
+/*****************************************************************************
+ * Bit position definitions for USART/UART
+ *****************************************************************************/
 
+/*
+ * Bit position definition USART_SR
+ */
+
+#define USART_SR_PE			0		// Parity Error Bit, 1 = Parity Error
+#define USART_SR_FE			1		// Framing Error, 1 = Framing error or break char detected
+#define USART_SR_NF			2 		// 1 = noise flag detected
+#define USART_SR_ORE		3 		// 1 = Overrun Error is detected
+#define USART_SR_IDLE		4		// 1 = Idle line is detected
+#define USART_SR_RXNE		5		// 1 = Received data is ready to be read.
+#define USART_SR_TC			6 		// 1 = Transmission is completed
+#define USART_SR_TXE		7		// 1 = Data is transferred to the shift register
+#define USART_SR_LBD		8		// 1 = LIN Break detected
+#define USART_SR_CTS		9		// 1 = A change is detected on the CTS status line
+
+/*
+ * USART Baud Rate Register
+ */
+
+#define USART_BRR_DIV_Fraction	0		// Bit3:0 = DIV_Fraction[3:0]
+#define USART_BRR_DIV_Mantissa [11:0]	// Bit 15:4 = USARTDIV
+
+/*
+ *  USART Control Register 1
+ */
+#define USART_CR1_SBK		0		// 1 =  Break character will be transmitted
+#define USART_CR1_RWU		1		// 1 = Receiver in mute mode
+#define USART_CR1_RE		2		// 1 = Receiver is enbabled and begins searching for start bit
+#define USART_CR1_TE		3		// 1 = Transimtter is enabled
+#define USART_CR1_IDLEIE	4		// 1 =  AN USART Interrupt is genearted when IDLE=1
+#define USART_CR1_RXNEIE	5		// 1 = An USART INterrupt is generated whenever ORE = 1 or RXNE =1
+#define USART_CR1_TCIE		6 		// 1 = INterrupt generated when TC = 1
+#define USART_CR1_TXEIE		7		// 1 = Interrupt generated when TXE = 1
+#define USART_CR1_PEIE		8 		// 1 = INterrupt generated when PE = 1
+#define USART_CR1_PS		9		// 1 = Odd parity (Parity Selection)
+#define USART_CR1_PCE		10 		// 1 = Parity control enabled
+#define USART_CR1_WAKE		11 		// 1 = Address Mark, 0= idle Line ,(wake meethod)
+#define USART_CR1_M			12		// Word Length, 1 =  9 data bits, 0 = 8 data bits
+#define USART_CR1_UE		13		// 1 = USART Enabled
+#define USART_CR1_OVER8		15		// 1 = OVER8
+
+
+/*
+ *  USART Control Register 2
+ */
+
+#define USART_CR2_ADD		0		// Bit3:0 == Address of USART Node
+#define USART_CR2_LBDL		5 		// 1 = 11-bit break detection
+#define USART_CR2_LBDIE		6		// 1 = interrupt generates when LBD = 1
+#define USART_CR2_LBCL		8		// 1 = Clock pulse of last data bit is output to CK pin
+#define USART_CR2_CPHA		9		// 1 = The second clock transition is the first data captured edge
+#define USART_CR2_CPOL		10		// 1 = Steady High value on CK pin outside transmission window
+#define USART_CR2_CLKEN		11		// 1 = Clock pin enabled
+#define USART_CR2_STOP		12		// Bit13:12, stop bits (00->11 = 1, 0.5, 2, 1.5 )
+#define USART_CR2_LINEN		13		// 1 = LIN Mode enabled
+
+/*
+ *  USART Control Register 3
+ */
+
+#define USART_CR3_EIE		0		// 1= Interrupt generated when DMAR = 1
+#define USART_CR3_IREN		1		// 1 = IrDA enabled
+#define USART_CR3_IRLP		2		// 1 = Low Power Mode
+#define USART_CR3_HDSEL		3		// 1 = Half Duplex mode is selected
+#define USART_CR3_NACK		4 		// 1 = NACK
+#define USART_CR3_SCEN		5		// 1 = Smartcard Mode enabled
+#define USART_CR3_DMAR		6		// 1 = DMA mode is enabled for recepted
+#define USART_CR3_DMAT		7		// 1 = DMA mode is enabled for transmission
+#define USART_CR3_RTSE		8		// 1 = RTS interrupt enabled
+#define USART_CR3_CTSE		9		// 1 = CTS Mode enabled
+#define USART_CR3_CTSIE		10		// 1 = An interrupt is generated when CTS = 1
+#define USART_CR3_ONEBIT	11		// 1 = One sample bit method
+
+/*
+ *  USART Guard time and prescaler register
+ */
+
+#define USART_GTPR_PSC		0		// Bit7:0 = prescaler value
+#define USART_GTPR_GT		1		// Bit15:8 = Guard time value
 
 
 

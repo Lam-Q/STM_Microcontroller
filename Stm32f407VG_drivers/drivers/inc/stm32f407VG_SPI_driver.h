@@ -24,8 +24,14 @@ typedef struct
 {
 	// pointer to hold the base address of the GPIO peripheral
 
-	SPI_RegDef_t *pSPIx;
-	SPI_Config_t SPI_Config;
+	SPI_RegDef_t 	*pSPIx;
+	SPI_Config_t 	SPI_Config;
+	uint8_t			*pTxBuffer;		/* !< To store the app. Tx Buffer address > */
+	uint8_t			*pRxBuffer;		/* !< To store the app. Rx Buffer address > */
+	uint32_t		TxLen;			/* !< To store the Tx Len   >*/
+	uint32_t 		RxLen;			/* !< to store the Rx Len   >*/
+	uint8_t			TxState;		/* !< to store the Tx State >*/
+	uint8_t			RxState; 		/* !< to store the rx State >*/
 
 }SPI_Handle_t;
 
@@ -98,6 +104,26 @@ typedef struct
 #define SPI_FRE_FLAG		(1 << SPI_SR_FRE)
 
 
+/*
+ *  Possible SPI Application States
+ */
+
+#define SPI_READY		0
+#define SPI_BUSY_IN_RX	1
+#define SPI_BUSY_IN_TX	2
+
+#define SPI_EVENT_TX_CMPLT	1
+#define SPI_EVENT_RX_CMPLT	2
+#define SPI_EVENT_OVR_ERR	3
+#define SPI_EVENT_CRC_ERR	4
+
+
+
+
+
+
+
+
 /********************************************************************************************************
  * 										API's Supported by this driver
  * 						For more information about the APIs check the function definition
@@ -121,25 +147,30 @@ void SPI_DeInit(SPI_RegDef_t *pSPIx); //use Peripheral RST register
 void SPI_SendData(SPI_RegDef_t *pSPIx, uint8_t *pTxBuffer, uint32_t Len);   // Standard practice to define length a uint32_t
 void SPI_ReceiveData(SPI_RegDef_t *pSPIx, uint8_t *pRxBuffer, uint32_t Len);
 
+uint8_t SPI_SendDataIT(SPI_Handle_t *pSPIHandle, uint8_t *pTxBuffer, uint32_t Len);   // Standard practice to define length a uint32_t
+uint8_t SPI_ReceiveDataIT(SPI_Handle_t *pSPIHandle, uint8_t *pRxBuffer, uint32_t Len);
 
 /*
  * IRQ Configuration and ISR Handling
  */
 
-void GPIO_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnorDi);
-void GPIO_IRQPriorityHandling(uint8_t IRQNumber, uint32_t IRQPriority);
-void GPIO_IRQHandling(SPI_Handle_t *pHandle);
+void SPI_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnorDi);
+void SPI_IRQPriorityHandling(uint8_t IRQNumber, uint32_t IRQPriority);
+void SPI_IRQHandling(SPI_Handle_t *pHandle);
 
 /*
  *  Other Peripheral Control APIs
  */
 
+void SPI_PeripheralControl(SPI_RegDef_t *pSPIx, uint8_t EnOrDi);
+void SPI_SSIConfig(SPI_RegDef_t *pSPIx, uint8_t EnOrDi);
+void SPI_SSOEConfig(SPI_RegDef_t *pSPIx, uint8_t EnOrDi);
 
 
+uint8_t SPI_GetFlagStatus(SPI_RegDef_t *pSPIx, uint32_t FlagName);
 
 
-
-
+__weak void SPI_ApplicationEventCallback(SPI_Handle_t *pSPIHandle,uint8_t AppEv);
 
 
 

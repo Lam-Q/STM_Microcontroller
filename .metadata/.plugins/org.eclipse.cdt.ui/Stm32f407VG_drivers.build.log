@@ -1,20 +1,36 @@
-20:24:15 **** Incremental Build of configuration Debug for project Stm32f407VG_drivers ****
+19:30:55 **** Incremental Build of configuration Debug for project Stm32f407VG_drivers ****
 make -j12 all 
-arm-none-eabi-gcc "../drivers/src/Stm32f407vg_spi_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -I"C:/Users/lamqi/OneDrive/Desktop/C_Programs/STM_Microcontroller/Stm32f407VG_drivers/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"drivers/src/Stm32f407vg_spi_driver.d" -MT"drivers/src/Stm32f407vg_spi_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/src/Stm32f407vg_spi_driver.o"
-arm-none-eabi-gcc -o "Stm32f407VG_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\lamqi\OneDrive\Desktop\C_Programs\STM_Microcontroller\Stm32f407VG_drivers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stm32f407VG_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Stm32f407VG_drivers.elf
+arm-none-eabi-gcc "../drivers/src/stm32F407VG_USART_driver2.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -I"C:/Users/lamqi/OneDrive/Desktop/C_Programs/STM_Microcontroller/Stm32f407VG_drivers/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"drivers/src/stm32F407VG_USART_driver2.d" -MT"drivers/src/stm32F407VG_USART_driver2.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/src/stm32F407VG_USART_driver2.o"
+In file included from C:/Users/lamqi/OneDrive/Desktop/C_Programs/STM_Microcontroller/Stm32f407VG_drivers/drivers/inc/stm32F407vg_USART_driver.h:11:0,
+                 from ../drivers/src/stm32F407VG_USART_driver2.c:11:
+C:/Users/lamqi/OneDrive/Desktop/C_Programs/STM_Microcontroller/Stm32f407VG_drivers/drivers/inc/stm32f407VG.h:16:0: warning: "NULL" redefined
+ #define NULL ( (void *) 0)
  
-arm-none-eabi-objdump -h -S  Stm32f407VG_drivers.elf  > "Stm32f407VG_drivers.list"
-arm-none-eabi-objcopy  -O binary  Stm32f407VG_drivers.elf  "Stm32f407VG_drivers.bin"
-arm-none-eabi-size   Stm32f407VG_drivers.elf 
-   text	   data	    bss	    dec	    hex	filename
-   2668	      8	   1568	   4244	   1094	Stm32f407VG_drivers.elf
-Finished building: default.size.stdout
+In file included from C:/Users/lamqi/OneDrive/Desktop/C_Programs/STM_Microcontroller/Stm32f407VG_drivers/drivers/inc/stm32f407VG.h:13:0,
+                 from C:/Users/lamqi/OneDrive/Desktop/C_Programs/STM_Microcontroller/Stm32f407VG_drivers/drivers/inc/stm32F407vg_USART_driver.h:11,
+                 from ../drivers/src/stm32F407VG_USART_driver2.c:11:
+c:\st\stm32cubeide_1.5.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924\tools\lib\gcc\arm-none-eabi\7.3.1\include\stddef.h:406:0: note: this is the location of the previous definition
+ #define NULL ((void *)0)
  
-Finished building: Stm32f407VG_drivers.bin
-Finished building: Stm32f407VG_drivers.list
- 
- 
+../drivers/src/stm32F407VG_USART_driver2.c: In function 'USART_IRQInterruptConfig':
+../drivers/src/stm32F407VG_USART_driver2.c:542:5: error: 'NVIC_ICER1' undeclared (first use in this function); did you mean 'NVIC_ICER0'?
+    *NVIC_ICER1 |= ( 1 << (IRQNumber % 32) );
+     ^~~~~~~~~~
+     NVIC_ICER0
+../drivers/src/stm32F407VG_USART_driver2.c:542:5: note: each undeclared identifier is reported only once for each function it appears in
+../drivers/src/stm32F407VG_USART_driver2.c:547:5: error: 'NVIC_ICER3' undeclared (first use in this function); did you mean 'NVIC_ICER1'?
+    *NVIC_ICER3 |= ( 1 << (IRQNumber % 64) );
+     ^~~~~~~~~~
+     NVIC_ICER1
+../drivers/src/stm32F407VG_USART_driver2.c: In function 'USART_IRQHandling':
+../drivers/src/stm32F407VG_USART_driver2.c:579:33: warning: variable 'dummyread' set but not used [-Wunused-but-set-variable]
+  uint32_t temp1 , temp2, temp3, dummyread;
+                                 ^~~~~~~~~
+../drivers/src/stm32F407VG_USART_driver2.c:579:26: warning: variable 'temp3' set but not used [-Wunused-but-set-variable]
+  uint32_t temp1 , temp2, temp3, dummyread;
+                          ^~~~~
+make: *** [drivers/src/subdir.mk:34: drivers/src/stm32F407VG_USART_driver2.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
 
-20:24:16 Build Finished. 0 errors, 0 warnings. (took 664ms)
+19:30:55 Build Failed. 3 errors, 3 warnings. (took 378ms)
 

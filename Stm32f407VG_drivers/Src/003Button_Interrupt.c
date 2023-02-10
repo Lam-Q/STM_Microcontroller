@@ -16,7 +16,7 @@ void delay(void)
 int main(void)
 {
 
-	// LED
+	// LED  Port D Input 12
 
 	GPIO_Handle_t GpioLed;
 	memset(&GpioLed,0,sizeof(GpioLed));

@@ -1,4 +1,7 @@
-"Src/003Button_Interrupt.o"
+"Src/0015_Usart_tx_testing.o"
 "Startup/startup_stm32f407vgtx.o"
 "drivers/src/Stm32f407vg_spi_driver.o"
+"drivers/src/stm32F407VG_I2C_driver.o"
+"drivers/src/stm32F407VG_USART_driver2.o"
 "drivers/src/stm32f407VG_Gpio_driver.o"
+"drivers/src/stm32f407VG_rcc_driver.o"

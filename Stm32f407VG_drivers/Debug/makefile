@@ -55,7 +55,7 @@ main-build: Stm32f407VG_drivers.elf secondary-outputs
 
 # Tool invocations
 Stm32f407VG_drivers.elf: $(OBJS) $(USER_OBJS) C:\Users\lamqi\OneDrive\Desktop\C_Programs\STM_Microcontroller\Stm32f407VG_drivers\STM32F407VGTX_FLASH.ld
-	arm-none-eabi-gcc -o "Stm32f407VG_drivers.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\lamqi\OneDrive\Desktop\C_Programs\STM_Microcontroller\Stm32f407VG_drivers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stm32f407VG_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "Stm32f407VG_drivers.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\lamqi\OneDrive\Desktop\C_Programs\STM_Microcontroller\Stm32f407VG_drivers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stm32f407VG_drivers.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

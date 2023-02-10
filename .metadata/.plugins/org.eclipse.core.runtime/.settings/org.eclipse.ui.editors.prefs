@@ -1,2 +1,4 @@
+bookmarkIndicationColor=0,255,255
 eclipse.preferences.version=1
+org.eclipse.cdt.ui.occurrenceIndicationColor=64,0,64
 overviewRuler_migration=migrated_3.1

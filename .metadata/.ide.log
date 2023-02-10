@@ -1044,3 +1044,171 @@
 
 
 2022-07-04 13:55:31,517 [INFO] Activator:171 - !SESSION log4j initialized
+2022-07-10 14:10:17,728 [INFO] Activator:170 - 
+
+
+2022-07-10 14:10:17,740 [INFO] Activator:171 - !SESSION log4j initialized
+2022-07-16 15:10:49,277 [INFO] Activator:170 - 
+
+
+2022-07-16 15:10:49,280 [INFO] Activator:171 - !SESSION log4j initialized
+2022-07-18 20:34:07,556 [INFO] Activator:170 - 
+
+
+2022-07-18 20:34:07,559 [INFO] Activator:171 - !SESSION log4j initialized
+2022-07-27 22:11:56,662 [INFO] Activator:170 - 
+
+
+2022-07-27 22:11:56,666 [INFO] Activator:171 - !SESSION log4j initialized
+2022-08-02 18:02:52,345 [INFO] Activator:170 - 
+
+
+2022-08-02 18:02:52,351 [INFO] Activator:171 - !SESSION log4j initialized
+2022-08-03 23:09:39,253 [INFO] Activator:170 - 
+
+
+2022-08-03 23:09:39,259 [INFO] Activator:171 - !SESSION log4j initialized
+2022-08-03 23:10:19,866 [INFO] RetryExec:97 - I/O exception (java.net.SocketException) caught when processing request to {}->http://sw-center.st.com:80: Socket Closed
+2022-08-03 23:10:19,870 [INFO] RetryExec:113 - Retrying request to {}->http://sw-center.st.com:80
+2022-08-07 14:53:55,673 [INFO] Activator:170 - 
+
+
+2022-08-07 14:53:55,687 [INFO] Activator:171 - !SESSION log4j initialized
+2022-08-13 12:18:37,563 [INFO] Activator:170 - 
+
+
+2022-08-13 12:18:37,570 [INFO] Activator:171 - !SESSION log4j initialized
+2022-08-14 14:53:09,383 [INFO] Activator:170 - 
+
+
+2022-08-14 14:53:09,389 [INFO] Activator:171 - !SESSION log4j initialized
+2022-08-16 22:17:59,673 [INFO] Activator:170 - 
+
+
+2022-08-16 22:17:59,676 [INFO] Activator:171 - !SESSION log4j initialized
+2022-08-27 14:41:45,531 [INFO] Activator:170 - 
+
+
+2022-08-27 14:41:45,534 [INFO] Activator:171 - !SESSION log4j initialized
+2022-08-28 00:21:36,569 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:36,578 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:37,265 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:37,266 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:38,266 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:38,266 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:39,612 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:39,612 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:40,273 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:40,273 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:41,265 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:41,265 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:42,264 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:42,264 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:43,277 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:43,277 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:44,259 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:44,259 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:45,265 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:45,265 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:46,271 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:46,271 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:47,262 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:47,262 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:48,278 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:48,278 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:49,273 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:49,274 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:50,260 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:50,260 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:51,264 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:51,264 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:52,274 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:52,274 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:53,260 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:53,260 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:54,269 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:54,269 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:55,273 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:55,273 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:56,262 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:56,262 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:57,270 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:57,271 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 00:21:58,262 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2022-08-28 00:21:58,262 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-08-28 19:58:38,264 [INFO] Activator:170 - 
+
+
+2022-08-28 19:58:38,269 [INFO] Activator:171 - !SESSION log4j initialized
+2022-09-10 14:55:48,598 [INFO] Activator:170 - 
+
+
+2022-09-10 14:55:48,605 [INFO] Activator:171 - !SESSION log4j initialized
+2022-09-18 14:23:42,076 [INFO] Activator:170 - 
+
+
+2022-09-18 14:23:42,079 [INFO] Activator:171 - !SESSION log4j initialized
+2022-09-18 15:06:00,323 [INFO] Activator:170 - 
+
+
+2022-09-18 15:06:00,325 [INFO] Activator:171 - !SESSION log4j initialized
+2022-10-03 08:59:49,384 [INFO] Activator:170 - 
+
+
+2022-10-03 08:59:49,390 [INFO] Activator:171 - !SESSION log4j initialized
+2022-10-21 16:24:03,505 [INFO] Activator:170 - 
+
+
+2022-10-21 16:24:03,508 [INFO] Activator:171 - !SESSION log4j initialized
+2022-10-22 16:42:48,948 [INFO] Activator:170 - 
+
+
+2022-10-22 16:42:48,951 [INFO] Activator:171 - !SESSION log4j initialized
+2022-10-26 19:50:12,641 [INFO] Activator:170 - 
+
+
+2022-10-26 19:50:12,646 [INFO] Activator:171 - !SESSION log4j initialized
+2022-11-05 17:04:55,576 [INFO] Activator:170 - 
+
+
+2022-11-05 17:04:55,580 [INFO] Activator:171 - !SESSION log4j initialized
+2022-11-09 20:11:07,745 [INFO] Activator:170 - 
+
+
+2022-11-09 20:11:07,752 [INFO] Activator:171 - !SESSION log4j initialized
+2022-11-09 21:07:11,441 [INFO] Activator:170 - 
+
+
+2022-11-09 21:07:11,448 [INFO] Activator:171 - !SESSION log4j initialized
+2022-11-09 21:12:39,529 [INFO] Activator:170 - 
+
+
+2022-11-09 21:12:39,535 [INFO] Activator:171 - !SESSION log4j initialized
+2022-11-10 20:48:11,057 [INFO] Activator:170 - 
+
+
+2022-11-10 20:48:11,062 [INFO] Activator:171 - !SESSION log4j initialized
+2022-11-13 15:49:50,487 [INFO] Activator:170 - 
+
+
+2022-11-13 15:49:50,490 [INFO] Activator:171 - !SESSION log4j initialized
+2022-11-18 19:11:30,785 [INFO] Activator:170 - 
+
+
+2022-11-18 19:11:30,792 [INFO] Activator:171 - !SESSION log4j initialized
+2022-11-18 19:48:19,703 [INFO] Activator:170 - 
+
+
+2022-11-18 19:48:19,706 [INFO] Activator:171 - !SESSION log4j initialized
+2022-11-18 19:50:12,242 [INFO] Activator:170 - 
+
+
+2022-11-18 19:50:12,245 [INFO] Activator:171 - !SESSION log4j initialized
+2022-11-24 20:15:21,516 [INFO] Activator:170 - 
+
+
+2022-11-24 20:15:21,521 [INFO] Activator:171 - !SESSION log4j initialized
+2022-12-03 17:02:24,640 [INFO] Activator:170 - 
+
+
+2022-12-03 17:02:24,651 [INFO] Activator:171 - !SESSION log4j initialized
